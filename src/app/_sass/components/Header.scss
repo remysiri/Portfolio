@@ -1,0 +1,14 @@
+@import '../abstracts/variables';
+
+.header {
+    display: grid;
+    justify-content: center;
+    padding: 2rem 0 2rem 0;
+    background: $color-primary;
+    position: sticky;
+    position: -webkit-sticky;
+
+    img {
+        height: 8rem;
+    }
+}
