@@ -1,0 +1,38 @@
+@import '../abstracts/variables';
+
+.introduction {
+    display: grid;
+    justify-content: center;
+    margin: 10rem auto;
+    max-width: 40rem;
+
+    h1 {
+        display: grid;
+        grid-template-columns: 8rem 1fr 1fr;
+
+        .first {
+            grid-column: 1;
+            font-size: 4rem;
+        }
+
+        .second {
+            grid-column: 2;
+            grid-row: 1;
+            font-weight: 100;
+            font-size: 4.4rem;
+        }
+
+        .third {
+            grid-column: 2;
+            grid-row: 2;
+            font-weight: 100;
+            font-size: 4.4rem;
+        }
+
+        .fourth {
+            grid-column: 3;
+            grid-row: 1 / span 2;
+            font-size: 8rem;
+        }
+    }
+}
