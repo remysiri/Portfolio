@@ -1,3 +1,17 @@
-@import './abstracts/_variables';
-@import './abstracts/_fonts';
-@import './base/_typography';
+/*
+Abstracts
+*/
+@import './abstracts/variables';
+@import './abstracts/fonts';
+
+/*
+Base
+*/
+@import './base/typography';
+
+/*
+Components
+*/
+@import './components/Header';
+@import './components/Introduction';
+@import './components/Footer';

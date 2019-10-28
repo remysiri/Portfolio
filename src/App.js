@@ -10,6 +10,11 @@ Layouts
 */
 import Main from './app/layouts/main';
 
+/*
+Styling
+*/
+import './app/_sass/App.scss';
+
 
 function App() {
   return (
