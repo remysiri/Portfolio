@@ -1,12 +1,19 @@
 .header {
     display: grid;
     justify-content: center;
-    padding: 2rem 0 2rem 0;
     background: $color-primary;
     position: sticky;
     position: -webkit-sticky;
+    padding: 2rem 0 2rem 0;
+
+    @include desktop {
+    }
 
     img {
-        height: 8rem;
+        height: 4rem;
+
+        @include desktop {
+            height: 8rem;
+        }
     }
 }

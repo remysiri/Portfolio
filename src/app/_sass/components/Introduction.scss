@@ -1,36 +1,66 @@
 .introduction {
     display: grid;
     justify-content: center;
-    margin: 10rem auto;
-    max-width: 40rem;
+    margin-top: 5rem;
 
     h1 {
         display: grid;
-        grid-template-columns: 8rem 1fr 1fr;
+        grid-template-columns: 1fr;
 
         .first {
             grid-column: 1;
-            font-size: 4rem;
+            font-size: 3rem;
         }
 
         .second {
             grid-column: 2;
             grid-row: 1;
             font-weight: 100;
-            font-size: 4.4rem;
+            font-size: 3.4rem;
         }
 
         .third {
             grid-column: 2;
             grid-row: 2;
             font-weight: 100;
-            font-size: 4.4rem;
+            font-size: 3.4rem;
         }
 
         .fourth {
-            grid-column: 3;
-            grid-row: 1 / span 2;
-            font-size: 8rem;
+            grid-column: 1 / span 2;
+            grid-row: 3;
+            font-size: 6rem;
+            margin-top: -1.5rem;
         }
+
+        @include desktop {
+            grid-template-columns: 8rem 1fr 1fr;
+
+            .first {
+                grid-column: 1;
+                font-size: 4rem;
+            }
+    
+            .second {
+                grid-column: 2;
+                grid-row: 1;
+                font-weight: 100;
+                font-size: 4.4rem;
+            }
+    
+            .third {
+                grid-column: 2;
+                grid-row: 2;
+                font-weight: 100;
+                font-size: 4.4rem;
+            }
+    
+            .fourth {
+                grid-column: 3;
+                grid-row: 1 / span 2;
+                font-size: 8rem;
+            }
+        }
+
     }
 }

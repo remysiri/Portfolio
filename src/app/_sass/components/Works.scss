@@ -1,0 +1,29 @@
+.works {
+    margin-top: 8rem;
+    width: 100%;
+    overflow: hidden;
+
+    .works__numbered {
+        text-align: center;
+    }
+
+    .works__wrapper {
+        margin-top: 4rem;
+        width: 100%;
+
+        .project__wrapper {
+            width: 100%;
+            height: 100vh;
+            border: 1px solid black;
+            background: rgba(255, 255, 255, 0.7);
+            width: 100%;
+
+            h2 {
+                padding: 0;
+                margin-top: -2.5rem;
+                z-index: -9000;
+                font-size: 9.9vw;
+            }
+        }
+    }
+}
