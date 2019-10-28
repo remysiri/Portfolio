@@ -4,10 +4,7 @@ import React from 'react';
 Libraries
 */
 
-/*
-Styling
-*/
-import '../../_sass/components/Introduction.scss';
+
 
 const Intro = () => (
     <section className="introduction">
