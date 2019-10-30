@@ -9,12 +9,16 @@ import { Link } from 'react-router-dom';
 Styling
 */
 import Logo from '../../assets/logo.svg';
+import Menu from '../../assets/menu.svg';
 
 const Header = () => (
-    <header className="header">
-        <Link to="/">
-            <img src={ Logo } alt="Logo" />
-        </Link>
+    <header>
+        <section className="header">
+            <Link to="/">
+                <img src={ Logo } alt="Logo" />
+            </Link>
+        </section>
+        <img className="menu" src={ Menu } alt="Menu" />
     </header>
 );
 

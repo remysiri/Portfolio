@@ -1,29 +1,81 @@
 .works {
     margin-top: 8rem;
     width: 100%;
+    height: 60rem;
     overflow: hidden;
 
-    .works__numbered {
-        text-align: center;
-    }
+    .slider {
+        width: 60%;
+        height: 100%;
+        margin: 4rem auto;
 
-    .works__wrapper {
-        margin-top: 4rem;
-        width: 100%;
+        .slider__index {
+            text-align: center;
+        }
 
-        .project__wrapper {
+        .slider__wrapper {
+            margin-top: 4rem;
             width: 100%;
-            height: 100vh;
-            border: 1px solid black;
-            background: rgba(255, 255, 255, 0.7);
-            width: 100%;
+            height: 100%;
+            padding: 0;
+            display: flex;
+            transition: transform 600ms cubic-bezier(0.25, 1, 0.35, 1);
+    
+            .slide {
+                position: relative;
+                opacity: 0.3;
+                flex: 1 0 100%;
+                width: 100%;
+                margin-right: 1rem;
+                transition: 
+                    opacity calc(600ms / 2) cubic-bezier(0.25, 0.46, 0.45, 0.84),
+                    transform calc(600ms / 2) cubic-bezier(0.25, 0.46, 0.45, 0.84);
 
-            h2 {
-                padding: 0;
-                margin-top: -2.5rem;
-                z-index: -9000;
-                font-size: 9.9vw;
+                .slide__image-wrapper {
+                    position: absolute;
+                    top: 0%;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+
+                    .slide__image {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        opacity: 0;
+                    }
+                }
+
+                .slide__content {
+                    opacity: 0;
+                    visibility: hidden;
+        
+                    .slide__headline {
+                        font-size: 9.6vw;
+                        width: 120%;
+                        position: absolute;
+                        margin-left: -10%;
+                        margin-top: -2.5rem;
+                        z-index: -9999;
+                    }
+                }
             }
+
+            .slide--current {
+                opacity: .9;
+
+                .slide__content {
+                    animation: fade-in calc(800ms / 2) cubic-bezier(0.25, 0.46, 0.45, 0.84) forwards;
+                    visibility: visible;
+                }
+            }
+            
         }
     }
 }
+
+@keyframes fade-in {
+    from { opacity: 0 }
+    to   { opacity: 1 }
+  }
+

@@ -1,19 +1,27 @@
-.header {
-    display: grid;
-    justify-content: center;
-    background: $color-primary;
-    position: sticky;
-    position: -webkit-sticky;
-    padding: 2rem 0 2rem 0;
-
-    @include desktop {
+header {
+    .header {
+        display: grid;
+        justify-content: center;
+        background: $color-primary;
+        position: sticky;
+        position: -webkit-sticky;
+        padding: 2rem 0 2rem 0;
+    
+        @include desktop {
+        }
+    
+        img {
+            height: 4rem;
+    
+            @include desktop {
+                height: 8rem;
+            }
+        }
     }
 
-    img {
-        height: 4rem;
-
-        @include desktop {
-            height: 8rem;
-        }
+    .menu {
+        height: 2.5rem;
+        margin: 1rem;
+        padding: 1rem;
     }
 }

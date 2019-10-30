@@ -1,98 +1,127 @@
-import React from "react";
-import { useSwipeable } from "react-swipeable";
-import {
-  CarouselContainer,
-  CarouselSlot,
-  PREV,
-  NEXT
-} from "./CarouselComponents";
+import React, { useState, useCallback, useRef } from "react";
 
-const Carousel = props => {
-	const numItems = React.Children.count(props.children);
-	const initialState = { pos: 0, sliding: false, dir: NEXT };
-	const [state, dispatch] = React.useReducer(reducer, initialState);
+const slideData = [
+  {
+    index: 0,
+    headline: "Project Name",
+    src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
+  },
+  {
+    index: 1,
+    headline: "Project Name",
+    src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
+  },
+  {
+    index: 2,
+    headline: "Project Name",
+    src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
+  },
+  {
+    index: 3,
+    headline: "Project Name",
+    src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
+  }
+];
 
-	const getOrder = ({ index, pos, numItems }) => {
-		if(index - pos < 0) {
-			return numItems - Math.abs(index - pos)
-		}
-		return index - pos
-	};
+// =========================
+// Slide
+// =========================
 
-	const slide = dir => {
-		dispatch({ type: dir, numItems });
-		setTimeout(() => {
-		dispatch({ type: "stopSliding" });
-		}, 50);
-	};
+const Slide = (props) => {
+  const slideRef = useRef();
 
-	const handlers = useSwipeable({
-		onSwipedLeft: () => slide(NEXT),
-		onSwipedRight: () => slide(PREV),
-		preventDefaultTouchmoveEvent: true,
-		trackMouse: true
-	});
+  const handleSlideClick = useCallback((event) => {
+    props.handleSlideClick(props.slide.index);
+  });
+
+  const imageLoaded = useCallback((event) => {
+    event.target.style.opacity = 1;
+  });
 
 
-	return (
-		<div {...handlers}>
-			<p className="works__numbered">{ state.pos + 1 } / { numItems }</p>
-			<div className="works__wrapper">
-				<CarouselContainer dir={state.dir} sliding={state.sliding}>
-					{React.Children.map(props.children, (child, index) => (
-						<CarouselSlot
-							key={index}
-							order={getOrder({ index: index, pos: state.pos, numItems })}
-							>
-								{child}
-						</CarouselSlot>
-					))}
-				</CarouselContainer>
-			</div>
-		</div>
-	);
-};
+  const { src, headline, index } = props.slide;
+    const current = props.current;
+    let classNames = "slide";
 
-function reducer(state, { type, numItems }) {
-	if(type === PREV) {
-		if(state.pos === 0) {
-			return {
-				...state,
-				dir: PREV,
-				sliding: false,
-				pos: 0
-			};
-		} else {
-			return {
-				...state,
-				dir: PREV,
-				sliding: true,
-				pos: state.pos === 0 ? numItems - 1 : state.pos - 1
-			};
-		}
-	}
+    if (current === index) classNames += " slide--current";
+    else if (current - 1 === index) classNames += " slide--previous";
+    else if (current + 1 === index) classNames += " slide--next";
 
-	if(type === NEXT) {
-		if(state.pos === numItems - 1) {
-			return {
-				...state,
-				dir: NEXT,
-				sliding: false,
-				pos: numItems - 1
-			};
-		} else {
-			return {
-				...state,
-				dir: NEXT,
-				sliding: true,
-				pos: state.pos + 1
-			};
-		}
-	}
+    return (
+      <li
+        ref={slideRef}
+        className={classNames}
+        onClick={handleSlideClick}
+      >
+        <div className="slide__image-wrapper">
+          <img
+            className="slide__image"
+            alt={headline}
+            src={src}
+            onLoad={imageLoaded}
+          />
+        </div>
 
-	if (type === "stopSliding") {
-		return { ...state, sliding: false };
-	}
+        <article className="slide__content">
+          <h2 className="slide__headline">{headline}</h2>
+        </article>
+      </li>
+    );
+
 }
 
-export default Carousel;
+// =========================
+// Slider
+// =========================
+
+const Slider = () => {
+  const [ current, setCurrent ] = useState(0);
+  const slides = slideData;
+
+
+
+  const handlePreviousClick = useCallback(() => {
+    const previous = current - 1;
+
+    setCurrent(previous < 0 ? slides.length - 1 : previous);
+  });
+
+  const handleNextClick = useCallback(() => {
+    const next = current + 1;
+
+    setCurrent(next === slides.length ? 0 : next);
+  });
+
+  const handleSlideClick = useCallback((index) => {
+    if (current !== index) {
+      setCurrent(index);
+    }
+  });
+
+
+    const wrapperTransform = {
+      transform: `translateX(-${current * (415 / slides.length)}%)`
+    };
+
+    return (
+      <div className="slider">
+        <p className="slider__index">{ current + 1 } / { slides.length }</p>
+        <ul className="slider__wrapper" style={wrapperTransform}>
+
+          {slides.map(slide => {
+            return (
+              <Slide
+                key={slide.index}
+                slide={slide}
+                current={current}
+                handleSlideClick={handleSlideClick}
+              />
+            );
+          })}
+        </ul>
+
+      </div>
+    );
+}
+
+export { slideData, Slide, Slider };
