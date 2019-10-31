@@ -13,7 +13,19 @@ h2 {
     color: $color-heading;
     text-transform: uppercase;
 }
+p {
+    line-height: 1.4;
+}
 
 ul {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $color-secondary;
+}
+
+a:visited {
+    color: $color-secondary;
 }

@@ -1,0 +1,27 @@
+.about {
+    width: 100%;
+    padding-top: 20rem;
+    display: grid;
+    justify-content: center;
+
+    article {
+        width: 100%;
+
+        .picture {
+            width: 60%;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .aboutme {
+            padding: 4rem;
+
+            p {
+                text-align: justify;
+            }
+        }
+    }
+}

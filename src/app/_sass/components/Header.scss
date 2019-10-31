@@ -1,27 +1,106 @@
 header {
+    position: fixed;
+    width: 100%;
+    z-index: 900;
+
     .header {
+        position: relative;
         display: grid;
         justify-content: center;
         background: $color-primary;
-        position: sticky;
-        position: -webkit-sticky;
         padding: 2rem 0 2rem 0;
-    
-        @include desktop {
-        }
-    
+        z-index: 9998;
+
         img {
             height: 4rem;
-    
-            @include desktop {
-                height: 8rem;
-            }
         }
     }
 
-    .menu {
-        height: 2.5rem;
-        margin: 1rem;
-        padding: 1rem;
+    .menu__wrapper {
+        z-index: 100;
+        
+        .menu {
+            img {
+                height: 2.5rem;
+                margin: 1rem;
+                padding: 1rem;
+                cursor: pointer;
+            }
+
+            .cover {
+                position: fixed;
+                visibility: hidden;
+                background: $color-primary;
+                height: 45px;
+                width: 48.75px;
+                top: 95px;
+                left: 10px;
+                transform:
+                    scaleX(1)
+                    scaleY(1)
+                    translate3d(0px, 0px, 0px);
+            }
+
+            .open__menu {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+
+        .menu__expanded {
+            .cover {
+                visibility: visible;
+                transform:
+                    scaleX(10)
+                    scaleY(20)
+                    translate3d(10px, 10px, 0px);
+
+                    img {
+                        height: 2.5rem;
+                        margin: 1rem;
+                        padding: 1rem;
+                        cursor: pointer;
+                    }
+            }
+
+            .open__menu {
+                position: fixed;
+                display: grid;
+                width: 100%;
+                z-index: 200;
+                visibility: visible;
+                opacity: 1;
+    
+                img {
+                    position: relative;
+                    top: -6.8rem;
+                    height: 2.5rem;
+                    margin: 1rem;
+                    padding: 1rem;
+                    cursor: pointer;
+                }
+
+                .navigation {
+                    list-style: none;
+
+                    li {
+                        color: $color-secondary;
+                        font-size: 3rem;
+                        margin: 2rem;
+                        padding: 1rem;
+                        text-align: center;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .cover {
+            transition: transform .3s ease-in-out;
+        }
+
+        .open__menu {
+            transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms;
+        }
     }
 }

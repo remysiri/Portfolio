@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 
 /*
-Styles
+Component
 */
+import About from '../../components/about';
 
 const AboutPage = () => {
     return (
-        <div>
-            HomePage
-        </div>
+        <section className="about">
+            <About />
+        </section>
     );
 }
 
