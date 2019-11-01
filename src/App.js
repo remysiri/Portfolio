@@ -11,6 +11,11 @@ Layouts
 import Main from './app/layouts/main';
 
 /*
+Components
+*/
+import ScrollToTop from './app/components/scrollReset';
+
+/*
 Styling
 */
 import './app/_sass/App.scss';
@@ -19,6 +24,7 @@ import './app/_sass/App.scss';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Main />
     </Router>
   );
