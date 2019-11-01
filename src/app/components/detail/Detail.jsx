@@ -1,8 +1,12 @@
 import React from 'react';
 
+import projectData from '../../assets/data/projects.json';
+
 import Image from '../../assets/images/fashion.jpg';
 
 const Detail = () => {
+
+
     return (
             <article className="detail">
                 <h1>Project name</h1>
