@@ -1,27 +1,8 @@
 import React, { useState, useCallback, useRef } from "react";
 
-const slideData = [
-  {
-    index: 0,
-    headline: "Project Name",
-    src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
-  },
-  {
-    index: 1,
-    headline: "Project Name",
-    src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
-  },
-  {
-    index: 2,
-    headline: "Project Name",
-    src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
-  },
-  {
-    index: 3,
-    headline: "Project Name",
-    src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
-  }
-];
+import projectData from '../../assets/data/projects.json';
+
+const slideData = projectData;
 
 // =========================
 // Slide
@@ -39,7 +20,7 @@ const Slide = (props) => {
   });
 
 
-  const { src, headline, index } = props.slide;
+  const { thumbnail, title, index } = props.slide;
     const current = props.current;
     let classNames = "slide";
 
@@ -56,14 +37,14 @@ const Slide = (props) => {
         <div className="slide__image-wrapper">
           <img
             className="slide__image"
-            alt={headline}
-            src={src}
+            alt={title}
+            src={thumbnail}
             onLoad={imageLoaded}
           />
         </div>
 
         <article className="slide__content">
-          <h3 className="slide__headline">{headline}</h3>
+          <h3 className="slide__headline">{title}</h3>
         </article>
       </li>
     );
@@ -124,4 +105,4 @@ const Slider = () => {
     );
 }
 
-export { slideData, Slide, Slider };
+export default Slider;
