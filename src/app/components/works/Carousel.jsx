@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useRef } from "react";
+import { Link } from 'react-router-dom';
 
 import projectData from '../../assets/data/projects.json';
 
@@ -43,9 +44,11 @@ const Slide = (props) => {
           />
         </div>
 
-        <article className="slide__content">
-          <h3 className="slide__headline">{title}</h3>
-        </article>
+          <article className="slide__content">
+            <Link to={`/project/${index}`}>
+              <h3 className="slide__headline">{title}</h3>
+            </Link>
+          </article>
       </li>
     );
 
