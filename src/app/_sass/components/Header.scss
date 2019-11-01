@@ -29,16 +29,10 @@ header {
 
             .cover {
                 position: fixed;
-                visibility: hidden;
                 background: $color-primary;
-                height: 45px;
-                width: 48.75px;
-                top: 95px;
-                left: 10px;
-                transform:
-                    scaleX(1)
-                    scaleY(1)
-                    translate3d(0px, 0px, 0px);
+                height: 0;
+                width: 0;
+                top: 0;
             }
 
             .open__menu {
@@ -48,20 +42,6 @@ header {
         }
 
         .menu__expanded {
-            .cover {
-                visibility: visible;
-                transform:
-                    scaleX(10)
-                    scaleY(20)
-                    translate3d(10px, 10px, 0px);
-
-                    img {
-                        height: 2.5rem;
-                        margin: 1rem;
-                        padding: 1rem;
-                        cursor: pointer;
-                    }
-            }
 
             .open__menu {
                 position: fixed;
@@ -95,12 +75,9 @@ header {
             }
         }
 
-        .cover {
-            transition: transform .3s ease-in-out;
-        }
+    }
 
-        .open__menu {
-            transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms;
-        }
+    .open__menu {
+        transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms;
     }
 }
