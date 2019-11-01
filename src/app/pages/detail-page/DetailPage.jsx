@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 /*
-Styles
+Components
 */
+import Detail from '../../components/detail';
 
 
 const DetailPage = () => {
     return (
-        <div>
-            HomePage
-        </div>
+        <section>
+            <Detail />
+        </section>
     );
 }
 

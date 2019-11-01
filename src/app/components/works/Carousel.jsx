@@ -63,7 +63,7 @@ const Slide = (props) => {
         </div>
 
         <article className="slide__content">
-          <h2 className="slide__headline">{headline}</h2>
+          <h3 className="slide__headline">{headline}</h3>
         </article>
       </li>
     );

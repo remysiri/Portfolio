@@ -8,7 +8,7 @@ body {
     font-weight: 100;
 }
 
-h2 {
+h2, h3 {
     font-weight: 700;
     color: $color-heading;
     text-transform: uppercase;
@@ -28,4 +28,8 @@ a {
 
 a:visited {
     color: $color-secondary;
+}
+
+.hidden {
+    opacity: 0;
 }

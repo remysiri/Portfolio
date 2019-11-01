@@ -8,7 +8,7 @@ Styles
 const NotFoundPage = () => {
     return (
         <div>
-            HomePage
+            Not Found man
         </div>
     );
 }
