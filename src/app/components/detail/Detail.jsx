@@ -1,33 +1,40 @@
 import React from 'react';
 
-import projectData from '../../assets/data/projects.json';
+import { useParams } from 'react-router-dom';
 
 import Image from '../../assets/images/fashion.jpg';
 
-const Detail = () => {
+const Detail = ({projects}) => {
+    let id = useParams();
+    const project = projects[parseInt(id.id, 10)];
+    if(!project) {
+        return null;
+    }
 
 
     return (
             <article className="detail">
-                <h1>Project name</h1>
+                <h1>{ project.title }</h1>
                 <div className="role__tags">
-                    <span>Developer</span>
-                    <span>Designer</span>
+                    {project.roles.map((roles) => {
+                        return <span key={ roles }>{ roles }</span>
+                    })}
                 </div>
-                <p className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan ex sed augue auctor gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <p className="description">{ project.description }</p>
                 <div className="external__links">
-                    <span><a href="#" target="__blank">Github</a></span>
-                    <span><a href="#" target="__blank">Demo</a></span>
+                    <span><a href={ project.links.github } target="__blank">Github</a></span>
+                    <span><a href={ project.links.demo } target="__blank">Demo</a></span>
                 </div>
 
                 <div className="date">
-                    <span className="year">2019</span>
-                    <span className="month">October</span>
+                    <span className="year">{ project.date.year }</span>
+                    <span className="month">{ project.date.month }</span>
                 </div>
 
                 <div className="images">
-                    <img src={ Image } alt="image" />
-                    <img src={ Image } alt="image" />
+                    {project.media.map((media) => {
+                        return <img key={ media.path } src={ media.path } alt="image" />
+                    })}
                 </div>
             </article>
     );

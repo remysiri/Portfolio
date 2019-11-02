@@ -13,7 +13,7 @@ const Slide = (props) => {
   const slideRef = useRef();
 
   const handleSlideClick = useCallback((event) => {
-    props.handleSlideClick(props.slide.index);
+    props.handleSlideClick(props.slide.id);
   });
 
   const imageLoaded = useCallback((event) => {
@@ -21,13 +21,13 @@ const Slide = (props) => {
   });
 
 
-  const { thumbnail, title, index } = props.slide;
+  const { thumbnail, title, id } = props.slide;
     const current = props.current;
     let classNames = "slide";
 
-    if (current === index) classNames += " slide--current";
-    else if (current - 1 === index) classNames += " slide--previous";
-    else if (current + 1 === index) classNames += " slide--next";
+    if (current === id) classNames += " slide--current";
+    else if (current - 1 === id) classNames += " slide--previous";
+    else if (current + 1 === id) classNames += " slide--next";
 
     return (
       <li
@@ -45,7 +45,7 @@ const Slide = (props) => {
         </div>
 
           <article className="slide__content">
-            <Link to={`/project/${index}`}>
+            <Link to={`/project/${id}`}>
               <h3 className="slide__headline">{title}</h3>
             </Link>
           </article>
@@ -76,9 +76,9 @@ const Slider = () => {
     setCurrent(next === slides.length ? 0 : next);
   });
 
-  const handleSlideClick = useCallback((index) => {
-    if (current !== index) {
-      setCurrent(index);
+  const handleSlideClick = useCallback((id) => {
+    if (current !== id) {
+      setCurrent(id);
     }
   });
 
@@ -89,16 +89,17 @@ const Slider = () => {
 
     return (
       <div className="slider">
-        <p className="slider__index">{ current + 1 } / { slides.length }</p>
+        <p className="slider__id">{ current + 1 } / { slides.length }</p>
         <ul className="slider__wrapper" style={wrapperTransform}>
 
           {slides.map(slide => {
             return (
               <Slide
-                key={slide.index}
+                key={slide.id}
                 slide={slide}
                 current={current}
                 handleSlideClick={handleSlideClick}
+                slide={slide}
               />
             );
           })}

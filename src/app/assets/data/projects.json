@@ -1,11 +1,14 @@
 [
     {
-        "index": 0,
+        "id": 0,
         "title": "Project name",
-        "slug": "projectname",
         "description": "description",
         "roles": ["Developer", "Designer"],
         "thumbnail": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
+        "date": {
+            "year": "2019",
+            "month": "October"
+        },
         "links": {
             "github": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
             "demo": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
@@ -20,12 +23,15 @@
         ]
     },
     {
-        "index": 1,
+        "id": 1,
         "title": "Project name",
-        "slug": "projectname",
         "description": "description",
         "roles": ["Developer", "Designer"],
         "thumbnail": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
+        "date": {
+            "year": "2019",
+            "month": "October"
+        },
         "links": {
             "github": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
             "demo": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
@@ -40,12 +46,15 @@
         ]
     },
     {
-        "index": 2,
+        "id": 2,
         "title": "Project name",
-        "slug": "projectname",
         "description": "description",
         "roles": ["Developer", "Designer"],
         "thumbnail": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
+        "date": {
+            "year": "2019",
+            "month": "October"
+        },
         "links": {
             "github": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
             "demo": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
@@ -60,12 +69,15 @@
         ]
     },
     {
-        "index": 3,
+        "id": 3,
         "title": "Project name",
-        "slug": "projectname",
         "description": "description",
         "roles": ["Developer", "Designer"],
         "thumbnail": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
+        "date": {
+            "year": "2019",
+            "month": "October"
+        },
         "links": {
             "github": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
             "demo": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
