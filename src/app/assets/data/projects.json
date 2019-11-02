@@ -1,10 +1,10 @@
 [
     {
         "id": 0,
-        "title": "Project name",
-        "description": "Sleep Tight is a sleep tracking app which tries to improve your sleeping pattern. It has an online community which helps other users improve their sleep. Take a quiz to determine what type of sleeper you are and we will do the rest. You can look at tips, videos and memes that other people post. Participate in photo contests and win awesome prizes!",
-        "roles": ["Developer", "Designer"],
-        "thumbnail": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
+        "title": "GTImports",
+        "description": "GTimports is an japanese sports car auctionning platform. People can auction their cars online or bid on ongoing auctions, the company behind it will also auction the cars that are available in their garages and offer a full maintenance on it.",
+        "roles": ["Full Stack Developer", "Designer"],
+        "thumbnail": "project-01/1.png",
         "date": {
             "year": "2019",
             "month": "October"
@@ -24,10 +24,10 @@
     },
     {
         "id": 1,
-        "title": "Project name",
-        "description": "Sleep Tight is a sleep tracking app which tries to improve your sleeping pattern. It has an online community which helps other users improve their sleep. Take a quiz to determine what type of sleeper you are and we will do the rest. You can look at tips, videos and memes that other people post. Participate in photo contests and win awesome prizes!",
-        "roles": ["Developer", "Designer"],
-        "thumbnail": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
+        "title": "Anima",
+        "description": "Anima is a community driven progressive web application where people will be able to rate and comment on animation series, people will also be able to see ongoing series and to be announced series in the future.",
+        "roles": ["Full Stack Developer", "Designer"],
+        "thumbnail": "project-02/1.png",
         "date": {
             "year": "2019",
             "month": "October"
@@ -47,10 +47,10 @@
     },
     {
         "id": 2,
-        "title": "Project name",
-        "description": "Sleep Tight is a sleep tracking app which tries to improve your sleeping pattern. It has an online community which helps other users improve their sleep. Take a quiz to determine what type of sleeper you are and we will do the rest. You can look at tips, videos and memes that other people post. Participate in photo contests and win awesome prizes!",
-        "roles": ["Developer", "Designer"],
-        "thumbnail": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
+        "title": "Untitled-01",
+        "description": "Untitled-01 is a untitled project made during my free time, this website is purely community driven bucketlist, where people will be able to create events and vote on them, based on the popularity of the events the organizing group behind this website will make some of the events come true.",
+        "roles": ["Full Stack Developer", "Designer"],
+        "thumbnail": "project-01/1.png",
         "date": {
             "year": "2019",
             "month": "October"
@@ -70,10 +70,10 @@
     },
     {
         "id": 3,
-        "title": "Project name",
-        "description": "Sleep Tight is a sleep tracking app which tries to improve your sleeping pattern. It has an online community which helps other users improve their sleep. Take a quiz to determine what type of sleeper you are and we will do the rest. You can look at tips, videos and memes that other people post. Participate in photo contests and win awesome prizes!",
-        "roles": ["Developer", "Designer"],
-        "thumbnail": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
+        "title": "Untitled-02",
+        "description": "Untitled-02 is a untitled project made during my free time, this website is an assiociation website where they will post their activities, events and such. During an event tickets will also be for sale on the website.",
+        "roles": ["Full Stack Developer", "Designer"],
+        "thumbnail": "project-01/1.png",
         "date": {
             "year": "2019",
             "month": "October"

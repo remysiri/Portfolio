@@ -39,7 +39,7 @@ const Slide = (props) => {
           <img
             className="slide__image"
             alt={title}
-            src={thumbnail}
+            src={require('../../assets/' + thumbnail)}
             onLoad={imageLoaded}
           />
         </div>

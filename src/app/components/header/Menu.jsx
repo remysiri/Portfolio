@@ -64,7 +64,7 @@ const Menu = () => {
 
                         <li><Link to="/about" onClick={ expandMenu }>About me</Link></li>
                         <li><a href="mailto:lymih@hotmail.com">Contact me</a></li>
-                        <li>View resume</li>
+                        <li><a href="https://drive.google.com/open?id=135UdoHBXHdOeHcQg8KtY2ducvzjs77V-" target="__blank">View resume</a></li>
                     </nav>
                 </div>
             </section>
