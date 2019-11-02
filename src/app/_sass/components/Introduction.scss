@@ -3,6 +3,14 @@
     justify-content: center;
     padding-top: 18rem;
 
+    @include tablet {
+        padding-top: 20rem;
+    }
+
+    @include desktop {
+        padding-top: 26rem;
+    }
+
     h1 {
         display: grid;
         grid-template-columns: 1fr;
@@ -34,7 +42,7 @@
         }
 
         @include desktop {
-            grid-template-columns: 8rem 1fr 1fr;
+            grid-template-columns: 8rem 16rem 1fr;
 
             .first {
                 grid-column: 1;
@@ -58,7 +66,7 @@
             .fourth {
                 grid-column: 3;
                 grid-row: 1 / span 2;
-                font-size: 8rem;
+                font-size: 10rem;
             }
         }
 

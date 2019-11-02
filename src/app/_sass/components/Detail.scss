@@ -3,6 +3,10 @@
     display: grid;
     justify-content: center;
 
+    @include tablet {
+        padding: 14rem 10rem 0 10rem;
+    }
+
     h1 {
         font-size: 3.6rem;
         margin-bottom: 0;
@@ -19,23 +23,34 @@
         }
     }
 
-    .description {
-        margin-top: 6rem;
-    }
-
-    .external__links {
-        margin-top: 4rem;
+    .content {
+        max-width: 80rem;
         display: grid;
-        width: 100%;
-        grid-template-columns: 1fr 1fr;
         justify-content: center;
         align-items: center;
+        margin: 0 auto;
 
-        span {
-            text-align: center;
-
-            a {
-                font-size: 2rem;
+        .description {
+            margin-top: 6rem;
+    
+            @include desktop {
+                margin: 6rem auto;
+            }
+        }
+    
+        .external__links {
+            margin-top: 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+    
+            span {
+                text-align: center;
+    
+                a {
+                    font-size: 2rem;
+                }
             }
         }
     }

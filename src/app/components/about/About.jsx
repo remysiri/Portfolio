@@ -7,7 +7,7 @@ import Picture from '../../assets/images/picture.jpg';
 
 const About = () => {
     return (
-            <article>
+            <article className="about__content">
                 <div className="picture">
                     <img src={ Picture } alt="picture"/>
                 </div>

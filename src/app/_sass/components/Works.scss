@@ -4,6 +4,15 @@
     height: 60rem;
     overflow: hidden;
 
+    @include tablet {
+        height: 100rem;
+        margin-top: 10rem;
+    }
+
+    @include desktop {
+        margin-top: 16rem;
+    }
+
     .slider {
         width: 60%;
         height: 100%;
@@ -52,7 +61,7 @@
                     visibility: hidden;
         
                     .slide__headline {
-                        font-size: 9.6vw;
+                        font-size: 9.5vw;
                         width: 120%;
                         height: 100%;
                         position: absolute;

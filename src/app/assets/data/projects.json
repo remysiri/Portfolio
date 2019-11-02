@@ -2,7 +2,7 @@
     {
         "id": 0,
         "title": "Project name",
-        "description": "description",
+        "description": "Sleep Tight is a sleep tracking app which tries to improve your sleeping pattern. It has an online community which helps other users improve their sleep. Take a quiz to determine what type of sleeper you are and we will do the rest. You can look at tips, videos and memes that other people post. Participate in photo contests and win awesome prizes!",
         "roles": ["Developer", "Designer"],
         "thumbnail": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
         "date": {
@@ -25,7 +25,7 @@
     {
         "id": 1,
         "title": "Project name",
-        "description": "description",
+        "description": "Sleep Tight is a sleep tracking app which tries to improve your sleeping pattern. It has an online community which helps other users improve their sleep. Take a quiz to determine what type of sleeper you are and we will do the rest. You can look at tips, videos and memes that other people post. Participate in photo contests and win awesome prizes!",
         "roles": ["Developer", "Designer"],
         "thumbnail": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
         "date": {
@@ -48,7 +48,7 @@
     {
         "id": 2,
         "title": "Project name",
-        "description": "description",
+        "description": "Sleep Tight is a sleep tracking app which tries to improve your sleeping pattern. It has an online community which helps other users improve their sleep. Take a quiz to determine what type of sleeper you are and we will do the rest. You can look at tips, videos and memes that other people post. Participate in photo contests and win awesome prizes!",
         "roles": ["Developer", "Designer"],
         "thumbnail": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
         "date": {
@@ -71,7 +71,7 @@
     {
         "id": 3,
         "title": "Project name",
-        "description": "description",
+        "description": "Sleep Tight is a sleep tracking app which tries to improve your sleeping pattern. It has an online community which helps other users improve their sleep. Take a quiz to determine what type of sleeper you are and we will do the rest. You can look at tips, videos and memes that other people post. Participate in photo contests and win awesome prizes!",
         "roles": ["Developer", "Designer"],
         "thumbnail": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
         "date": {

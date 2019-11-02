@@ -20,10 +20,12 @@ const Detail = ({projects}) => {
                         return <span key={ roles }>{ roles }</span>
                     })}
                 </div>
-                <p className="description">{ project.description }</p>
-                <div className="external__links">
-                    <span><a href={ project.links.github } target="__blank">Github</a></span>
-                    <span><a href={ project.links.demo } target="__blank">Demo</a></span>
+                <div class="content">
+                    <p className="description">{ project.description }</p>
+                    <div className="external__links">
+                        <span><a href={ project.links.github } target="__blank">Github</a></span>
+                        <span><a href={ project.links.demo } target="__blank">Demo</a></span>
+                    </div>
                 </div>
 
                 <div className="date">
