@@ -32,8 +32,8 @@
         "roles": ["Concept Designer"],
         "thumbnail": "project-02/1.png",
         "date": {
-            "year": "2019",
-            "month": "October"
+            "year": "2018",
+            "month": "May"
         },
         "links": {
             "github": null,
@@ -41,56 +41,64 @@
         },
         "media": [
             {
-                "path": "project-01/2.png"
+                "path": "project-02/2.png"
             },
             {
-                "path": "project-01/2.png"
+                "path": "project-02/3.png"
+            },
+            {
+                "path": "project-02/4.png"
+            },
+            {
+                "path": "project-02/5.png"
+            },
+            {
+                "path": "project-02/6.png"
             }
         ]
     },
     {
         "id": 2,
-        "title": "Untitled-01",
-        "description": "Untitled-01 is a untitled project made during my free time, this website is purely community driven bucketlist, where people will be able to create events and vote on them, based on the popularity of the events the organizing group behind this website will make some of the events come true.",
+        "title": "Unionlao",
+        "description": "Website for a lao association based in Belgium.",
         "roles": ["Full Stack Developer", "Designer"],
-        "thumbnail": "project-01/1.png",
+        "thumbnail": "project-03/1.png",
         "date": {
             "year": "2019",
-            "month": "October"
+            "month": "September"
         },
         "links": {
-            "github": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
-            "demo": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
+            "github": null,
+            "demo": "https://unionlao.be/"
         },
         "media": [
             {
-                "path": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
+                "path": "project-03/1.png"
             },
             {
-                "path": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
+                "path": "project-03/1.png"
             }
         ]
     },
     {
         "id": 3,
-        "title": "Untitled-02",
-        "description": "Untitled-02 is a untitled project made during my free time, this website is an assiociation website where they will post their activities, events and such. During an event tickets will also be for sale on the website.",
-        "roles": ["Full Stack Developer", "Designer"],
-        "thumbnail": "project-01/1.png",
-        "date": {
-            "year": "2019",
-            "month": "October"
-        },
-        "links": {
-            "github": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
-            "demo": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
-        },
-        "media": [
+        "title": "Misc.",
+        "description": "Various projects on which I contributed to or simple projects which do not require a spot on the roster.",
+        "thumbnail": "project-00/1.png",
+        "projects": [
             {
-                "path": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
-            },
-            {
-                "path": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
+                "title": "GTA World.",
+                "description": "GTAWorld is a heavy text-based RP",
+                "roles": ["Front-end Developer", "Designer"],
+                "links": {
+                    "github": null,
+                    "demo": "https://ucp.gta.world/"
+                },
+                "media": [
+                    {
+                        "path": "project-00/1.png"
+                    }
+                ]
             }
         ]
     }
