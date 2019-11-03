@@ -55,18 +55,18 @@ const Menu = () => {
         <section className="menu__wrapper">
             <section className={ classNames }>
                 <img src={ Icon } alt="menu" onClick={ expandMenu } ref={ menuIcon }/>
-                <motion.div animate={ animateMenu } className="cover"></motion.div>
+                <motion.div animate={ animateMenu } className="cover">
+                    <div id="open__menu" className="open__menu">
+                        <img src={ Discard } alt="menu" onClick={ expandMenu } ref={ menuIcon }/>
 
-                <div id="open__menu" className="open__menu">
-                    <img src={ Discard } alt="menu" onClick={ expandMenu } ref={ menuIcon }/>
+                        <nav className="navigation">
 
-                    <nav className="navigation">
-
-                        <li><Link to="/about" onClick={ expandMenu }>About me</Link></li>
-                        <li><a href="mailto:lymih@hotmail.com">Contact me</a></li>
-                        <li><a href="https://drive.google.com/open?id=135UdoHBXHdOeHcQg8KtY2ducvzjs77V-" target="__blank">View resume</a></li>
-                    </nav>
-                </div>
+                            <li><Link to="/about" onClick={ expandMenu }>About me</Link></li>
+                            <li><a href="mailto:lymih@hotmail.com">Contact me</a></li>
+                            <li><a href="https://drive.google.com/open?id=135UdoHBXHdOeHcQg8KtY2ducvzjs77V-" target="__blank">View resume</a></li>
+                        </nav>
+                    </div>
+                </motion.div>
             </section>
         </section>
     );
