@@ -1,7 +1,7 @@
 $query-phone: 320px;
 $query-tablet: 768px;
 $query-desktop: 1224px;
-$query-desktop-large: 1824px;
+$query-desktop-large: 3000px;
 
 @mixin phone {
     @media (min-width: #{$query-phone}) {

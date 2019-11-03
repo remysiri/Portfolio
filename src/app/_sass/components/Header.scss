@@ -13,6 +13,14 @@ header {
 
         img {
             height: 4rem;
+
+            @include tablet {
+                height: 6rem;
+            }
+            
+            @include desktop-large {
+                height: 14rem;
+            }
         }
     }
 
@@ -50,6 +58,11 @@ header {
                 z-index: 200;
                 visibility: visible;
                 opacity: 1;
+                padding-top: 15.5rem;
+                
+                @include tablet {
+                    padding-top: 17.5rem;
+                }
     
                 img {
                     position: relative;

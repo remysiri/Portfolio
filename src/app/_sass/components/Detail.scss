@@ -7,10 +7,22 @@
         padding: 14rem 10rem 0 10rem;
     }
 
+    @include desktop {
+        padding: 16rem 10rem 0 10rem;
+    }
+
+    @include desktop-large {
+        padding: 30rem 10rem 0 10rem;
+    }
+
     h1 {
         font-size: 3.6rem;
         margin-bottom: 0;
         text-align: center;
+        
+        @include desktop-large {
+            font-size: 5.6rem;
+        }
     }
 
     .role__tags {

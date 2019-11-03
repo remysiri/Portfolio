@@ -7,12 +7,17 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     color: $color-secondary;
+
+    @include desktop-large {
+        font-size: 3rem;
+    }
 }
 
 h2, h3 {
     font-weight: 700;
     color: $color-secondary;
     text-transform: uppercase;
+
 }
 p {
     line-height: 1.5;
