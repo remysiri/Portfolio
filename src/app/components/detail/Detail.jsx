@@ -9,6 +9,22 @@ const Detail = ({projects}) => {
     const project = projects[parseInt(id.id, 10)];
     if(!project) {
         return null;
+    } else if(project.title === "Misc.") {
+        return (
+            <article className="detail">
+                <h1>{ project.title }</h1>
+                <div className="content">
+                    <p className="description">{ project.description }</p>
+                </div>
+
+                {project.projects.map((project) => {
+                   return <div key={ project.title }>
+                            <h2>{ project.title }</h2>
+                            <div className="expanded__tab"></div>
+                        </div>
+                })}
+            </article>
+        );
     }
 
 
@@ -20,7 +36,7 @@ const Detail = ({projects}) => {
                         return <span key={ roles }>{ roles }</span>
                     })}
                 </div>
-                <div class="content">
+                <div className="content">
                     <p className="description">{ project.description }</p>
                     <div className="external__links">
                         <span>
