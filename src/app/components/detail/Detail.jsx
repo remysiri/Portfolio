@@ -24,7 +24,13 @@ const Detail = ({projects}) => {
                     <p className="description">{ project.description }</p>
                     <div className="external__links">
                         <span><a href={ project.links.github } target="__blank">Github</a></span>
-                        <span><a href={ project.links.demo } target="__blank">Demo</a></span>
+                        <span>
+                            {
+                                project.links.demo === null
+                                ? <a href={ project.links.demo } target="__blank">Demo not available</a>
+                                : <a href={ project.links.demo } target="__blank">Demo</a>
+                            }
+                        </span>
                     </div>
                 </div>
 
