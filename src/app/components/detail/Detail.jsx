@@ -23,7 +23,13 @@ const Detail = ({projects}) => {
                 <div class="content">
                     <p className="description">{ project.description }</p>
                     <div className="external__links">
-                        <span><a href={ project.links.github } target="__blank">Github</a></span>
+                        <span>
+                            {
+                                project.links.github === null
+                                ? <a href={ project.links.github } target="__blank">Github not available</a>
+                                : <a href={ project.links.github } target="__blank">Github</a>
+                            }
+                        </span>
                         <span>
                             {
                                 project.links.demo === null
@@ -41,7 +47,7 @@ const Detail = ({projects}) => {
 
                 <div className="images">
                     {project.media.map((media) => {
-                        return <img key={ media.path } src={ media.path } alt="image" />
+                        return <img key={ media.path } src={require('../../assets/' + media.path)} alt="image" />
                     })}
                 </div>
             </article>

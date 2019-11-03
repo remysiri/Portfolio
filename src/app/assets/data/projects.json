@@ -6,8 +6,8 @@
         "roles": ["Full Stack Developer", "Designer"],
         "thumbnail": "project-01/1.png",
         "date": {
-            "year": "2019",
-            "month": "October"
+            "year": "2018",
+            "month": "June"
         },
         "links": {
             "github": "https://github.com/remysiri/car-auction-app",
@@ -15,33 +15,36 @@
         },
         "media": [
             {
-                "path": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
+                "path": "project-01/2.png"
             },
             {
-                "path": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
+                "path": "project-01/3.png"
+            },
+            {
+                "path": "project-01/4.png"
             }
         ]
     },
     {
         "id": 1,
         "title": "Anima",
-        "description": "Anima is a community driven progressive web application where people will be able to rate and comment on animation series, people will also be able to see ongoing series and to be announced series in the future.",
-        "roles": ["Full Stack Developer", "Designer"],
+        "description": "Anima is a community driven progressive web application where people will be able to rate and comment on animation series, people will also be able to see ongoing series and to be announced series in the future. ( The development of this project has not started and is just a concept design )",
+        "roles": ["Concept Designer"],
         "thumbnail": "project-02/1.png",
         "date": {
             "year": "2019",
             "month": "October"
         },
         "links": {
-            "github": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
-            "demo": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
+            "github": null,
+            "demo": null
         },
         "media": [
             {
-                "path": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
+                "path": "project-01/2.png"
             },
             {
-                "path": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
+                "path": "project-01/2.png"
             }
         ]
     },
