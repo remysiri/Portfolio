@@ -2,8 +2,6 @@ import React from 'react';
 
 import { useParams } from 'react-router-dom';
 
-import Image from '../../assets/images/fashion.jpg';
-
 const Detail = ({projects}) => {
     let id = useParams();
     const project = projects[parseInt(id.id, 10)];
