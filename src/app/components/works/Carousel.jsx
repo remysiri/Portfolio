@@ -24,6 +24,10 @@ const Slide = (props) => {
   const { thumbnail, title, id } = props.slide;
     const current = props.current;
     let classNames = "slide";
+    const thumbnailImage = require('../../assets/' + thumbnail);
+    const style = {
+      backgroundImage: `url('${thumbnailImage}')`
+    }
 
     if (current === id) classNames += " slide--current";
     else if (current - 1 === id) classNames += " slide--previous";
@@ -34,16 +38,8 @@ const Slide = (props) => {
         ref={slideRef}
         className={classNames}
         onClick={handleSlideClick}
+        style={style}
       >
-        <div className="slide__image-wrapper">
-          <img
-            className="slide__image"
-            alt={title}
-            src={require('../../assets/' + thumbnail)}
-            onLoad={imageLoaded}
-          />
-        </div>
-
           <article className="slide__content">
             <Link to={`/project/${id}`}>
               <h3 className="slide__headline">{title}</h3>
