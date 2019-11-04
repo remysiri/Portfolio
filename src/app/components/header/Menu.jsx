@@ -63,7 +63,7 @@ const Menu = () => {
 
                             <li><Link to="/about" onClick={ expandMenu }>About me</Link></li>
                             <li><a href="mailto:lymih@hotmail.com">Contact me</a></li>
-                            <li><a href="https://drive.google.com/open?id=135UdoHBXHdOeHcQg8KtY2ducvzjs77V-" target="__blank">View resume</a></li>
+                            <li><a href="https://drive.google.com/open?id=1Bkwg6IaUKTsEQpJ6xrFHvpuAVutaqgnH" target="__blank">View resume</a></li>
                         </nav>
                     </div>
                 </motion.div>
