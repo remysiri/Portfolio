@@ -18,11 +18,13 @@ import Logo from '../../assets/logo.svg';
 const Header = () => (
     <header>
         <section className="header">
+        <Menu />
+        <div className="logo__wrapper">
             <Link to="/">
                 <img src={ Logo } alt="Logo" />
             </Link>
+        </div>
         </section>
-        <Menu />
     </header>
 );
 

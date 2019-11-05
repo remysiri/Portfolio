@@ -6,13 +6,23 @@ header {
     .header {
         position: relative;
         display: grid;
+        grid-template-columns: auto 1fr;
         justify-content: center;
         background: $color-primary;
         padding: 2rem 0 2rem 0;
         z-index: 9998;
 
+        .logo__wrapper {
+            text-align: center;
+            padding-right: 6.8rem;
+            z-index: 999999;
+        }
+
         img {
             height: 4rem;
+            text-align: center;
+            padding-top: 0.5rem;
+            margin-top: 0.5rem;
 
             @include tablet {
                 height: 6rem;
@@ -66,7 +76,7 @@ header {
     
                 img {
                     position: relative;
-                    top: -6.8rem;
+                    top: -15.5rem;
                     height: 2.5rem;
                     margin: 1rem;
                     padding: 1rem;
