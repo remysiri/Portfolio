@@ -16,7 +16,7 @@ const detailContentVariants = {
 
 const Accordion = ({ i, expanded, setExpanded }) => {
     const isOpen = i === expanded;
-    const { title, description, roles, links, media } = i;
+    const { title, description, roles, links } = i;
 
     return (
         <>
@@ -75,21 +75,19 @@ const Accordion = ({ i, expanded, setExpanded }) => {
 }
 
 const Detail = ({projects}) => {
-    let id = useParams();
-    const project = projects[parseInt(id.slug, 10)];
-    console.log(id);
+
     const [ expanded, setExpanded ] = useState(false, 0);
-    if(!project) {
+    if(!projects) {
         return null;
-    } else if(project.title === "Misc.") {
+    } else if(projects.title === "Misc.") {
         return (
             <motion.article variants={detailContentVariants}>
-                <h1>{ project.title }</h1>
+                <h1>{ projects.title }</h1>
                 <div className="content">
-                    <p className="description">{ project.description }</p>
+                    <p className="description">{ projects.description }</p>
                 </div>
 
-                {project.projects.map((project) => {
+                {projects.projects.map((project) => {
                    return  <Accordion i={project} expanded={expanded} setExpanded={setExpanded} />
                 })}
             </motion.article>
@@ -99,39 +97,39 @@ const Detail = ({projects}) => {
 
     return (
             <motion.article variants={detailContentVariants}>
-                <h1>{ project.title }</h1>
+                <h1>{ projects.title }</h1>
                 <div className="role__tags">
-                    {project.roles.map((roles) => {
+                    {projects.roles.map((roles) => {
                         return <span key={ roles }>{ roles }</span>
                     })}
                 </div>
                 <div className="content">
-                    <p className="description">{ project.description }</p>
+                    <p className="description">{ projects.description }</p>
                     <div className="external__links">
                         <span>
                             {
-                                project.links.github === null
-                                ? <a href={ project.links.github } target="__blank">Github not available</a>
-                                : <a href={ project.links.github } target="__blank">Github</a>
+                                projects.links.github === null
+                                ? <a href={ projects.links.github } target="__blank">Github not available</a>
+                                : <a href={ projects.links.github } target="__blank">Github</a>
                             }
                         </span>
                         <span>
                             {
-                                project.links.demo === null
-                                ? <a href={ project.links.demo } target="__blank">Demo not available</a>
-                                : <a href={ project.links.demo } target="__blank">Demo</a>
+                                projects.links.demo === null
+                                ? <a href={ projects.links.demo } target="__blank">Demo not available</a>
+                                : <a href={ projects.links.demo } target="__blank">Demo</a>
                             }
                         </span>
                     </div>
                 </div>
 
                 <div className="date">
-                    <span className="year">{ project.date.year }</span>
-                    <span className="month">{ project.date.month }</span>
+                    <span className="year">{ projects.date.year }</span>
+                    <span className="month">{ projects.date.month }</span>
                 </div>
 
                 <div className="images">
-                    {project.media.map((media) => {
+                    {projects.media.map((media) => {
                         return <img key={ media.path } src={require('../../assets/' + media.path)} alt="image" />
                     })}
                 </div>

@@ -28,24 +28,18 @@ const navigateVariants = {
 
 
 const DetailPage = () => {
-    const history = useLocation();
-    const currentProject = useParams();
-    const path = "/project/";
-    const [ projectIndex, setProjectIndex ] = useState(0);
-
+    let id = useParams();
+    const project = projects[parseInt(id.slug, 10)];
+    
     return (
         <motion.section className="detail" initial="exit" animate="enter" exit="exit">
             <motion.div className="back" variants={backVariants}>
                 <Link to="/">←</Link>
             </motion.div>
-            <Detail projects={projects}/>
+            <Detail projects={project}/>
             <motion.div className="navigate__projects" variants={navigateVariants}>
                 <div className="navigate__wrapper">
-                    {
-                        history.pathname === path + 0
-                        ? <Link to="" style={{opacity: 0}}>←</Link>
-                        : <Link to="">←</Link>
-                    }
+                    <Link to="">←</Link>
                     <p>Projects</p>
                     <p>→</p>
                 </div>
