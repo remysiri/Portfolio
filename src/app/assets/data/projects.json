@@ -1,6 +1,7 @@
 [
     {
         "id": 0,
+        "slug": "gtimports",
         "title": "GTImports",
         "description": "GTimports is an japanese sports car auctionning platform. People can auction their cars online or bid on ongoing auctions, the company behind it will also auction the cars that are available in their garages and offer a full maintenance on it.",
         "roles": ["Full Stack Developer", "Designer"],
@@ -27,6 +28,7 @@
     },
     {
         "id": 1,
+        "slug": "anima",
         "title": "Anima",
         "description": "Anima is a community driven progressive web application where people will be able to rate and comment on animation series, people will also be able to see ongoing series and to be announced series in the future. ( The development of this project has not started and is just a concept design )",
         "roles": ["Concept Designer"],
@@ -59,6 +61,7 @@
     },
     {
         "id": 2,
+        "slug": "unionlao",
         "title": "Unionlao",
         "description": "Website for a lao association based in Belgium.",
         "roles": ["Full Stack Developer", "Designer"],
@@ -82,6 +85,7 @@
     },
     {
         "id": 3,
+        "slug": "misc",
         "title": "Misc.",
         "description": "Various projects on which I contributed to or simple projects which do not require a spot on the roster.",
         "thumbnail": "project-00/1.png",

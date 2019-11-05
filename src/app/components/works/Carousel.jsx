@@ -21,7 +21,7 @@ const Slide = (props) => {
   });
 
 
-  const { thumbnail, title, id } = props.slide;
+  const { thumbnail, title, slug, id } = props.slide;
     const current = props.current;
     let classNames = "slide";
     const thumbnailImage = require('../../assets/' + thumbnail);
@@ -41,7 +41,7 @@ const Slide = (props) => {
         style={style}
       >
           <article className="slide__content">
-            <Link to={`/project/${id}`}>
+            <Link to={`${id}`}>
               <h3 className="slide__headline">{title}</h3>
             </Link>
           </article>

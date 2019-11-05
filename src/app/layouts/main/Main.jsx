@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
+import { AnimatePresence } from 'framer-motion';
 
 /*
 Libraries
 */
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 
 /*
 Styling
@@ -47,13 +48,15 @@ const Main = () => {
                 <meta name="twitter:description" content="Portfolio of Rémy Sirichantho, a web developer and graphic designer. Currently based in Belgium." />
             </Helmet>
             <Header />
-            <Switch>
-                <Redirect from="/home" to="/"/>
-                <Route exact path="/" component={ HomePage }/>
-                <Route path="/about" component={ AboutPage }/>
-                <Route path="/project/:id" component={ DetailPage }/>
-                <Route path="*" component={ NotFoundPage }/>
-            </Switch>
+                <AnimatePresence exitBeforeEnter>
+                <Switch>
+                    <Redirect from="/home" to="/"/>
+                    <Route exact path="/" component={ HomePage }/>
+                    <Route path="/about" component={ AboutPage }/>
+                    <Route path="/:slug" component={ DetailPage }/>
+                    <Route path="*" component={ NotFoundPage }/>
+                </Switch>
+                </AnimatePresence>
             <Footer />
         </section>
     );

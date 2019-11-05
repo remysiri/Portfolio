@@ -3,6 +3,17 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
+
+const transition = {
+    duration: 1,
+    ease: [0.43, 0.13, 0.23, 0.96]
+}
+
+const detailContentVariants = {
+    exit: { y: "50%", opacity: 0, transition },
+    enter: { y: "0%", opacity: 1, transition }
+}
+
 const Accordion = ({ i, expanded, setExpanded }) => {
     const isOpen = i === expanded;
     const { title, description, roles, links, media } = i;
@@ -56,12 +67,6 @@ const Accordion = ({ i, expanded, setExpanded }) => {
                             </div>
                         </div>
 
-                        <div className="images">
-                            {media.map((media) => {
-                                return <img key={ media.path } src={require('../../assets/' + media.path)} alt="image" />
-                            })}
-                        </div>
-
                     </motion.section>
                 )}
             </AnimatePresence>
@@ -71,13 +76,14 @@ const Accordion = ({ i, expanded, setExpanded }) => {
 
 const Detail = ({projects}) => {
     let id = useParams();
-    const project = projects[parseInt(id.id, 10)];
+    const project = projects[parseInt(id.slug, 10)];
+    console.log(id);
     const [ expanded, setExpanded ] = useState(false, 0);
     if(!project) {
         return null;
     } else if(project.title === "Misc.") {
         return (
-            <article className="detail">
+            <motion.article variants={detailContentVariants}>
                 <h1>{ project.title }</h1>
                 <div className="content">
                     <p className="description">{ project.description }</p>
@@ -86,13 +92,13 @@ const Detail = ({projects}) => {
                 {project.projects.map((project) => {
                    return  <Accordion i={project} expanded={expanded} setExpanded={setExpanded} />
                 })}
-            </article>
+            </motion.article>
         );
     }
 
 
     return (
-            <article className="detail">
+            <motion.article variants={detailContentVariants}>
                 <h1>{ project.title }</h1>
                 <div className="role__tags">
                     {project.roles.map((roles) => {
@@ -129,7 +135,7 @@ const Detail = ({projects}) => {
                         return <img key={ media.path } src={require('../../assets/' + media.path)} alt="image" />
                     })}
                 </div>
-            </article>
+            </motion.article>
     );
 }
 
