@@ -1,52 +1,42 @@
 import React, { useState, useCallback, useRef } from "react";
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import useDimensions from "react-use-dimensions";
+import useWindowSize from "@rehooks/window-size";
 
 import projectData from '../../assets/data/projects.json';
 
 const slideData = projectData;
 
-// =========================
-// Slide
-// =========================
+const transition = { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] };
 
-const Slide = (props) => {
-  const slideRef = useRef();
+const thumbnailVariants = {
+  initial: { x: "80%", opacity: 0 },
+  enter: { x: "0%", opacity: 1, transition },
+  exit: {
+    x: "80%",
+    opacity: 0,
+    transition: { duration: 1.5, ...transition }
+  }
+};
 
-  const handleSlideClick = useCallback((event) => {
-    props.handleSlideClick(props.slide.id);
-  });
-
-  const imageLoaded = useCallback((event) => {
-    event.target.style.opacity = 1;
-  });
-
+const Projects = (props) => {
 
   const { thumbnail, title, slug, id } = props.slide;
-    const current = props.current;
-    let classNames = "slide";
-    const thumbnailImage = require('../../assets/' + thumbnail);
-    const style = {
-      backgroundImage: `url('${thumbnailImage}')`
-    }
+  const thumbnailImage = require('../../assets/' + thumbnail);
+  const style = {
+    backgroundImage: `url('${thumbnailImage}')`
+  }
 
-    if (current === id) classNames += " slide--current";
-    else if (current - 1 === id) classNames += " slide--previous";
-    else if (current + 1 === id) classNames += " slide--next";
-
-    return (
-      <li
-        ref={slideRef}
-        className={classNames}
-        onClick={handleSlideClick}
-        style={style}
-      >
-          <article className="slide__content">
-            <Link to={`${id}`}>
-              <h3 className="slide__headline">{title}</h3>
-            </Link>
-          </article>
-      </li>
-    );
+  return (
+    <motion.div style={style} variants={thumbnailVariants}>
+        <article className="slide__content">
+          <Link to={`${id}`}>
+            <h3 className="slide__headline">{title}</h3>
+          </Link>
+        </article>
+    </motion.div>
+  );
 
 }
 
@@ -55,54 +45,49 @@ const Slide = (props) => {
 // =========================
 
 const Slider = () => {
-  const [ current, setCurrent ] = useState(0);
   const slides = slideData;
 
+  const [trackRef, trackDimensions] = useDimensions();
+  const windowDimensions = useWindowSize();
 
-
-  const handlePreviousClick = useCallback(() => {
-    const previous = current - 1;
-
-    setCurrent(previous < 0 ? slides.length - 1 : previous);
-  });
-
-  const handleNextClick = useCallback(() => {
-    const next = current + 1;
-
-    setCurrent(next === slides.length ? 0 : next);
-  });
-
-  const handleSlideClick = useCallback((id) => {
-    if (current !== id) {
-      setCurrent(id);
-    }
-  });
-
-
-    const wrapperTransform = {
-      transform: `translateX(-${current * (415 / slides.length)}%)`
-    };
 
     return (
-      <div className="slider">
-        <p className="slider__id">{ current + 1 } / { slides.length }</p>
-        <ul className="slider__wrapper" style={wrapperTransform}>
+      <motion.div 
+      className="projects__container"
+        initial="initial"
+        animate="enter"
+        exit="exit"
+        >
+        <motion.div
+          className="projects__wrapper"
+          ref={trackRef}
+        drag="x"
+        dragConstraints={{
+          left:
+            windowDimensions.innerWidth -
+            trackDimensions.width -
+            trackDimensions.x,
+          right: 0 + trackDimensions.x
+        }}
+        >
 
-          {slides.map(slide => {
-            return (
-              <Slide
-                key={slide.id}
-                slide={slide}
-                current={current}
-                handleSlideClick={handleSlideClick}
-                slide={slide}
-              />
-            );
-          })}
-        </ul>
+            {slides.map(slide => {
+              return (
+                <Projects
+                  key={slide.id}
+                  slide={slide}
+                />
+              );
+            })}
 
-      </div>
+        </motion.div>
+      </motion.div>
     );
+}
+
+Slider.defaultProps = {
+  velocity: 0.4,
+  transition: { type: "spring", damping: 500 }
 }
 
 export default Slider;
