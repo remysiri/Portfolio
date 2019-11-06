@@ -20,21 +20,30 @@ const thumbnailVariants = {
   }
 };
 
+const thumbnailContentVariants = {
+  initial: { opacity: 0, y: "-100%"},
+  hover: { opacity: 1, y: "0%", transition },
+}
+
 const Projects = (props) => {
 
-  const { thumbnail, title, slug, id } = props.slide;
+  const { thumbnail, title, type, id } = props.slide;
   const thumbnailImage = require('../../assets/' + thumbnail);
   const style = {
     backgroundImage: `url('${thumbnailImage}')`
   }
 
   return (
-    <motion.div style={style} variants={thumbnailVariants}>
-        <article className="slide__content">
-          <Link to={`${id}`}>
-            <h3 className="slide__headline">{title}</h3>
-          </Link>
-        </article>
+    <motion.div className="project__content-wrapper" style={style} whileHover="hover" variants={thumbnailVariants} transition={transition}>
+      <Link to={`${id}`}>
+        <motion.article className="project__content" variants={thumbnailContentVariants}>
+            <div className="project__content-left">
+              <h3 className="project__title">{title}</h3>
+              <p className="project__type">{type}</p>
+            </div>
+            <div className="project__content-right">→</div>
+        </motion.article>
+        </Link>
     </motion.div>
   );
 

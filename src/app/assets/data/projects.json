@@ -2,10 +2,12 @@
     {
         "id": 0,
         "slug": "gtimports",
+        "type": "Web Application",
         "title": "GTImports",
         "description": "GTimports is an japanese sports car auctionning platform. People can auction their cars online or bid on ongoing auctions, the company behind it will also auction the cars that are available in their garages and offer a full maintenance on it.",
         "roles": ["Full Stack Developer", "Designer"],
-        "thumbnail": "project-01/1.png",
+        "thumbnail": "project-01/1.jpg",
+        "team": null,
         "date": {
             "year": "2018",
             "month": "June"
@@ -29,10 +31,12 @@
     {
         "id": 1,
         "slug": "anima",
+        "type": "Progressive Web App",
         "title": "Anima",
         "description": "Anima is a community driven progressive web application where people will be able to rate and comment on animation series, people will also be able to see ongoing series and to be announced series in the future. ( The development of this project has not started and is just a concept design )",
         "roles": ["Concept Designer"],
-        "thumbnail": "project-02/1.png",
+        "thumbnail": "project-02/1.jpg",
+        "team": null,
         "date": {
             "year": "2018",
             "month": "May"
@@ -61,11 +65,65 @@
     },
     {
         "id": 2,
+        "slug": "grow",
+        "type": "Mobile Application",
+        "title": "Grow",
+        "description": "Grow is a mobile application with which you can keep track of your gas, water and electricity consuming rates. The rates at which you consume energy will affect the growth of your virtual plant which will be a Hologram placed in your house.",
+        "roles": ["Designer"],
+        "thumbnail": "project-03/1.jpg",
+        "team": [
+            {
+                "name": "Tjorven Dewulf",
+                "role": "Project Manager",
+                "link": "https://github.com/tjordewu"
+            },
+            {
+                "name": "Cedric Vanhaegenberg",
+                "role": "Developer",
+                "link": "https://github.com/cedrvanh/"
+            }
+        ],
+        "date": {
+            "year": "2018",
+            "month": "January"
+        },
+        "links": {
+            "github": null,
+            "demo": null
+        },
+        "media": [
+            {
+                "path": "project-03/2.jpg"
+            },
+            {
+                "path": "project-03/3.jpg"
+            },
+            {
+                "path": "project-03/4.jpg"
+            },
+            {
+                "path": "project-03/5.jpg"
+            },
+            {
+                "path": "project-03/6.jpg"
+            },
+            {
+                "path": "project-03/7.jpg"
+            },
+            {
+                "path": "project-03/8.jpg"
+            }
+        ]
+    },
+    {
+        "id": 3,
         "slug": "unionlao",
+        "type": "Website",
         "title": "Unionlao",
         "description": "Website for a lao association based in Belgium.",
         "roles": ["Full Stack Developer", "Designer"],
-        "thumbnail": "project-03/1.png",
+        "thumbnail": "project-04/1.png",
+        "team": null,
         "date": {
             "year": "2019",
             "month": "September"
@@ -76,15 +134,15 @@
         },
         "media": [
             {
-                "path": "project-03/1.png"
+                "path": "project-04/1.png"
             },
             {
-                "path": "project-03/1.png"
+                "path": "project-04/1.png"
             }
         ]
     },
     {
-        "id": 3,
+        "id": 4,
         "slug": "misc",
         "title": "Misc.",
         "description": "Various projects on which I contributed to or simple projects which do not require a spot on the roster.",

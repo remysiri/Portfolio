@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { useParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -105,6 +106,23 @@ const Detail = ({projects}) => {
                 </div>
                 <div className="content">
                     <p className="description">{ projects.description }</p>
+                    { projects.team !== null ?
+                    <div className="team">
+                        { projects.team.map((team) => {
+                            return <div className="person">
+                                <p>{ team.name }</p>
+                                <p>{ team.role }</p>
+                                {
+                                    team.link === null
+                                    ? <a>No Github</a>
+                                    : <Link to={ team.link }>Github</Link>
+                                }
+                            </div>
+                        })}
+                    </div>
+                    :
+                    null
+                    }
                     <div className="external__links">
                         <span>
                             {

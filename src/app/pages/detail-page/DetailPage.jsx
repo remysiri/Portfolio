@@ -30,7 +30,7 @@ const navigateVariants = {
 const DetailPage = () => {
     let id = useParams();
     const project = projects[parseInt(id.slug, 10)];
-    
+
     return (
         <motion.section className="detail" initial="exit" animate="enter" exit="exit">
             <motion.div className="back" variants={backVariants}>
@@ -41,7 +41,7 @@ const DetailPage = () => {
                 <div className="navigate__wrapper">
                     <Link to="">←</Link>
                     <p>Projects</p>
-                    <p>→</p>
+                    <Link to ="">→</Link>
                 </div>
             </motion.div>
         </motion.section>
