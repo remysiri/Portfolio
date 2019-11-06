@@ -8,7 +8,7 @@ import projectData from '../../assets/data/projects.json';
 
 const slideData = projectData;
 
-const transition = { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] };
+const transition = { duration: 0.4, ease: [0.80, 0.05, 0.23, 0.96] };
 
 const thumbnailVariants = {
   initial: { x: "80%", opacity: 0 },
