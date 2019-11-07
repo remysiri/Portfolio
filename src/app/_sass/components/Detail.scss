@@ -127,9 +127,30 @@
     }
 
     .accordion {
+        position: relative;
         max-width: 40rem;
         margin: 0 auto;
         cursor: pointer;
         font-weight: 700;
+        padding: 1rem;
+
+        &::after {
+            position: absolute;
+            content: "▼";
+            font-size: 1rem;
+            right: 0;
+            padding-right: 1rem;
+            padding-top: .5rem;
+        }
+    }
+
+    .accordion-body {
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: 1rem 0;
+
+        .bold {
+            font-weight: 700;
+        }
     }
 }

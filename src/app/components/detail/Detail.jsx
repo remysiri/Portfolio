@@ -24,12 +24,13 @@ const Accordion = ({ i, expanded, setExpanded }) => {
             <motion.div
                 className="accordion"
                 initial={false}
-                animate={{ backgroundColor: isOpen ? "#red" : "#green" }}
+                animate={{ backgroundColor: isOpen ? "#e4e4e4" : "#fff" }}
                 onClick={() => setExpanded(isOpen ? false : i)}
             >{ title }</motion.div>
             <AnimatePresence initial={false}>
                 {isOpen && (
                     <motion.section
+                        className="accordion-body"
                         key="content"
                         initial="collapsed"
                         animate="open"
@@ -41,30 +42,28 @@ const Accordion = ({ i, expanded, setExpanded }) => {
                         transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
                     >
                         
-                        <div className="role__tags">
-                            {roles.map((role) => {
-                                return <span key={ role }>{ role }</span>
-                            })}
+                        <div className="accordion__role">
+                            <p><span className="bold">Roles:</span>  { roles }</p>
                         </div>
 
-                        <div className="content">
-                            <p className="description">{ description }</p>
+                        <div className="accordion__content">
+                            <p className="accordion__content-description"><span className="bold">Description:</span> { description }</p>
                             <div className="external__links">
-                                <span>
+                                <p>
                                     {
                                         links.github === null
-                                        ? <a href={ links.github } target="__blank">Github not available</a>
+                                        ? null
                                         : <a href={ links.github } target="__blank">Github</a>
                                     }
-                                </span>
+                                </p>
 
-                                <span>
+                                <p>
                                     {
                                         links.demo === null
                                         ? <a href={ links.demo } target="__blank">Demo not available</a>
                                         : <a href={ links.demo } target="__blank">Demo</a>
                                     }
-                                </span>
+                                </p>
                             </div>
                         </div>
 

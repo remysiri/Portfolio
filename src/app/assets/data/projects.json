@@ -150,8 +150,8 @@
         "projects": [
             {
                 "title": "GTA World.",
-                "description": "GTAWorld is a heavy text-based RP",
-                "roles": ["Front-end Developer", "Designer"],
+                "description": "GTA World is a heavy, text based GTA V Roleplay server striving to provide a heavy and immersing experience.",
+                "roles": "Front-end Developer, Designer",
                 "links": {
                     "github": null,
                     "demo": "https://ucp.gta.world/"
