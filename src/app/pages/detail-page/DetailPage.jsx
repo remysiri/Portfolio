@@ -21,11 +21,6 @@ const backVariants = {
     enter: { x: 0, opacity: 1, transition: { delay: 1, ...transition}}
 }
 
-const navigateVariants = {
-    exit: { y: "50%", opacity: 0, transition },
-    enter: { y: "0%", opacity: 1, transition: { delay: 1, ...transition}}
-}
-
 
 const DetailPage = () => {
     let id = useParams();
@@ -37,13 +32,6 @@ const DetailPage = () => {
                 <Link to="/">←</Link>
             </motion.div>
             <Detail projects={project}/>
-            <motion.div className="navigate__projects" variants={navigateVariants}>
-                <div className="navigate__wrapper">
-                    <Link to="">←</Link>
-                    <p>Projects</p>
-                    <Link to ="">→</Link>
-                </div>
-            </motion.div>
         </motion.section>
     );
 }

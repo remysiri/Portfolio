@@ -31,29 +31,6 @@
         z-index: 300;
     }
 
-    .navigate__projects {
-        width: 100%;
-        position: fixed;
-        bottom: 8rem;
-        left: 0;
-
-        .navigate__wrapper {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            align-items: center;
-            text-align: center;
-
-            a {
-                font-size: 3rem;
-            }
-
-            p {
-                font-size: 1.5rem;
-                text-transform: uppercase;
-            }
-        }
-    }
-
     .role__tags {
         display: grid;
         grid-template-columns: 100%;
@@ -150,7 +127,9 @@
     }
 
     .accordion {
-        max-width: 80rem;
+        max-width: 40rem;
+        margin: 0 auto;
         cursor: pointer;
+        font-weight: 700;
     }
 }
