@@ -15,7 +15,7 @@ const detailContentVariants = {
     enter: { y: "0%", opacity: 1, transition }
 }
 
-const Accordion = ({ i, expanded, setExpanded }) => {
+const AccordionMisc = ({ i, expanded, setExpanded }) => {
     const isOpen = i === expanded;
     const { title, description, roles, links } = i;
 
@@ -74,6 +74,7 @@ const Accordion = ({ i, expanded, setExpanded }) => {
     );
 }
 
+
 const Detail = ({projects}) => {
 
     const [ expanded, setExpanded ] = useState(false, 0);
@@ -88,7 +89,7 @@ const Detail = ({projects}) => {
                 </div>
 
                 {projects.projects.map((project) => {
-                   return  <Accordion i={project} expanded={expanded} setExpanded={setExpanded} />
+                   return  <AccordionMisc i={project} expanded={expanded} setExpanded={setExpanded} />
                 })}
             </motion.article>
         );
@@ -114,7 +115,7 @@ const Detail = ({projects}) => {
                                 {
                                     team.link === null
                                     ? <a>No Github</a>
-                                    : <Link to={ team.link }>Github</Link>
+                                    : <a href={ team.link } target="__blank">Github</a>
                                 }
                             </div>
                         })}
