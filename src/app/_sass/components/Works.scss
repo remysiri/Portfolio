@@ -1,3 +1,21 @@
+.carousel__action {
+    display: grid;
+    grid-template-columns: 11rem 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    .line {
+        height: .25rem;
+        width: 10rem;
+        background: $color-secondary;
+    }
+
+    .swipe {
+        font-weight: 700;
+    }
+}
+
 .works {
     margin-top: 8rem;
     width: 100%;
@@ -34,7 +52,7 @@
                 overflow: hidden;
 
                 @include tablet {
-                    margin-left: 4rem;
+                    margin-left: 2rem;
                     width: 60rem;
                     height: 55vh;
                 }

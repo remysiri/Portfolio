@@ -13,62 +13,25 @@
 
     h1 {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 8rem 1fr;
 
-        .first {
+        .hello {
             grid-column: 1;
-            font-size: 3rem;
+            font-size: 4rem;
         }
 
-        .second {
+        .speciality-one {
             grid-column: 2;
             grid-row: 1;
+            font-size: 4.4rem;
             font-weight: 100;
-            font-size: 3.4rem;
         }
-
-        .third {
+        
+        .speciality-two {
             grid-column: 2;
             grid-row: 2;
+            font-size: 4.4rem;
             font-weight: 100;
-            font-size: 3.4rem;
         }
-
-        .fourth {
-            grid-column: 1 / span 2;
-            grid-row: 3;
-            font-size: 6rem;
-            margin-top: -1.5rem;
-        }
-
-        @include desktop {
-            grid-template-columns: 8rem 16rem 1fr;
-
-            .first {
-                grid-column: 1;
-                font-size: 4rem;
-            }
-    
-            .second {
-                grid-column: 2;
-                grid-row: 1;
-                font-weight: 100;
-                font-size: 4.4rem;
-            }
-    
-            .third {
-                grid-column: 2;
-                grid-row: 2;
-                font-weight: 100;
-                font-size: 4.4rem;
-            }
-    
-            .fourth {
-                grid-column: 3;
-                grid-row: 1 / span 2;
-                font-size: 10rem;
-            }
-        }
-
     }
 }
