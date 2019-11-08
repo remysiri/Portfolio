@@ -9,7 +9,7 @@ const About = () => {
     return (
             <article className="about__content">
                 <div className="picture">
-                    <img src={ Picture } alt="picture"/>
+                    <img src={ Picture } alt="Remy"/>
                 </div>
                 <div className="aboutme">
                     <h1>Hi, my name is <span>Rémy Sirichantho</span></h1>

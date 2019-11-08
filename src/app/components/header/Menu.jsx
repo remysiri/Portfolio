@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 /*
 Components
 */
-import { useRect } from '../useRect/useRect';
+
 
 /*
 Styling

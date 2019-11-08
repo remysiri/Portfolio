@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import useDimensions from "react-use-dimensions";
