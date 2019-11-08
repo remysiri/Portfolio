@@ -152,6 +152,7 @@
                 "title": "GTA World.",
                 "description": "GTA World is a heavy, text based GTA V Roleplay server striving to provide a heavy and immersing experience.",
                 "roles": "Front-end Developer, Designer",
+                "technologies": "Git & Laravel as Front & Backend",
                 "links": {
                     "github": null,
                     "demo": "https://ucp.gta.world/"

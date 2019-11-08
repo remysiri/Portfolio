@@ -17,7 +17,7 @@ const detailContentVariants = {
 
 const AccordionMisc = ({ i, expanded, setExpanded }) => {
     const isOpen = i === expanded;
-    const { title, description, roles, links } = i;
+    const { title, description, technologies, roles, links } = i;
 
     return (
         <>
@@ -48,6 +48,7 @@ const AccordionMisc = ({ i, expanded, setExpanded }) => {
 
                         <div className="accordion__content">
                             <p className="accordion__content-description"><span className="bold">Description:</span> { description }</p>
+                            <p className="accordion__content-technologies"><span className="bold">Technologies:</span> { technologies }</p>
                             <div className="external__links">
                                 <p>
                                     {
