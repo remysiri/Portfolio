@@ -24,6 +24,7 @@ import './app/_sass/App.scss';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Main />
     </Router>
   );
