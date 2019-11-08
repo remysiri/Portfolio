@@ -59,7 +59,7 @@ const AccordionMisc = ({ i, expanded, setExpanded }) => {
                                 <p>
                                     {
                                         links.demo === null
-                                        ? <a href={ links.demo } target="__blank">Demo not available</a>
+                                        ? <p>Demo not available</p>
                                         : <a href={ links.demo } target="__blank">Demo</a>
                                     }
                                 </p>
@@ -113,7 +113,7 @@ const Detail = ({projects}) => {
                                 <p>{ team.role }</p>
                                 {
                                     team.link === null
-                                    ? <a>No Github</a>
+                                    ? <p>No Github</p>
                                     : <a href={ team.link } target="__blank">Github</a>
                                 }
                             </div>
@@ -126,14 +126,14 @@ const Detail = ({projects}) => {
                         <span>
                             {
                                 projects.links.github === null
-                                ? <a href={ projects.links.github } target="__blank">Github not available</a>
+                                ? <p>Github not available</p>
                                 : <a href={ projects.links.github } target="__blank">Github</a>
                             }
                         </span>
                         <span>
                             {
                                 projects.links.demo === null
-                                ? <a href={ projects.links.demo } target="__blank">Demo not available</a>
+                                ? <p>Demo not available</p>
                                 : <a href={ projects.links.demo } target="__blank">Demo</a>
                             }
                         </span>
@@ -147,7 +147,7 @@ const Detail = ({projects}) => {
 
                 <div className="images">
                     {projects.media.map((media) => {
-                        return <img key={ media.path } src={require('../../assets/' + media.path)} alt="image" />
+                        return <img key={ media.path } src={require('../../assets/' + media.path)} alt="visuals" />
                     })}
                 </div>
             </motion.article>

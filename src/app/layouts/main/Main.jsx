@@ -16,6 +16,7 @@ Components
 */
 import Header from '../../components/header';
 import Footer from '../../components/footer';
+import ScrollToTop from '../../components/scrollReset';
 
 /*
 Pages
@@ -30,15 +31,21 @@ const Main = () => {
     return (
         <section>
             <Header />
-                <AnimatePresence exitBeforeEnter>
-                <Switch>
-                    <Redirect from="/home" to="/"/>
-                    <Route exact path="/" component={ HomePage }/>
-                    <Route path="/about" component={ AboutPage }/>
-                    <Route path="/:slug" component={ DetailPage }/>
-                    <Route path="*" component={ NotFoundPage }/>
-                </Switch>
-                </AnimatePresence>
+            <Router>
+            <ScrollToTop />
+                <Route render={({ location }) => (
+                    <AnimatePresence exitBeforeEnter initial={ false }>
+                    <Switch location={ location } key={location.pathname}>
+                        <Redirect from="/home" to="/"/>
+                        <Route exact path="/" component={ HomePage }/>
+                        <Route path="/about" component={ AboutPage }/>
+                        <Route path="/:slug" component={ DetailPage }/>
+                        <Route path="*" component={ NotFoundPage }/>
+                    </Switch>
+                    </AnimatePresence>
+                )}
+                />
+            </Router>
             <Footer />
         </section>
     );
