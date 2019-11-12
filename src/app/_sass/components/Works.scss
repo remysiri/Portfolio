@@ -46,15 +46,21 @@
             .project__content-wrapper {
                 margin-left: 1rem;
                 width: 30rem;
-                height: 35vh;
+                height: 25rem;
                 background-position: 50%;
                 background-size: cover;
                 overflow: hidden;
 
                 @include tablet {
                     margin-left: 2rem;
+                    width: 50rem;
+                    height: 45rem;
+                }
+
+                @include desktop {
+                    margin-left: 2rem;
                     width: 60rem;
-                    height: 55vh;
+                    height: 55rem;
                 }
 
                 a {

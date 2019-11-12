@@ -13,11 +13,12 @@
 
     h1 {
         display: grid;
-        grid-template-columns: 8rem 1fr;
+        grid-template-columns: 8.4rem 1fr;
 
         .hello {
             grid-column: 1;
-            font-size: 4rem;
+            font-size: 4.4rem;
+            font-weight: 700;
         }
 
         .speciality-one {
@@ -32,6 +33,10 @@
             grid-row: 2;
             font-size: 4.4rem;
             font-weight: 100;
+
+            .bold {
+                font-weight: 700;
+            }
         }
     }
 }
