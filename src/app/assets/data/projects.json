@@ -129,13 +129,10 @@
             "month": "September"
         },
         "links": {
-            "github": null,
+            "github": "https://github.com/remysiri/unionlao",
             "demo": "https://unionlao.be/"
         },
         "media": [
-            {
-                "path": "project-04/1.png"
-            },
             {
                 "path": "project-04/1.png"
             }
